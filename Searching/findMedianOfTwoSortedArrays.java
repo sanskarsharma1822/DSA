@@ -45,13 +45,12 @@ public class findMedianOfTwoSortedArrays {
             int i1 = (start+end)/2;
             int i2 = ((arr1.length+arr2.length+1)/2) - i1;
             int left1 = i1==0?Integer.MIN_VALUE:arr1[i1-1];
-            int right1 = i1==arr1.length-1?Integer.MAX_VALUE:arr2[i1];
+            int right1 = i1==arr1.length-1?Integer.MAX_VALUE:arr1[i1];
             int left2 = i2==0?Integer.MIN_VALUE:arr2[i2-1];
-            int right2 = i2==arr1.length-1?Integer.MAX_VALUE:arr2[i2];
+            int right2 = i2==arr2.length-1?Integer.MAX_VALUE:arr2[i2];
 
             if(left1<=right2 && left2<=right1){
                 if((arr1.length + arr2.length)%2==0){
-                    System.out.println(Math.min(right1,right2)+ " "+Math.max(left1,left2));
                     return ((float)Math.min(right1,right2) + (float)Math.max(left1,left2)) /2;
                 }
                 else{
