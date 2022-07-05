@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.*;
-
 public class bubbleSort {
 
     static void bubble(int arr[]){
